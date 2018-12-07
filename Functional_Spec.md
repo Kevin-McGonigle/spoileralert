@@ -372,6 +372,7 @@ Testing is one of our constraints because there is a lack of a &#39;gold standar
 # 4. System Architecture
 
 4.1 System Architecture diagram
+![System Architecture Diagram](/Images/SystemArchitectureDiagram.PNG)
 
 
 **Website:** The website that is visited by the user. Our product will determine if the website visited by the user is a valid website that the product can begin parsing and analysing text.
@@ -388,15 +389,16 @@ Testing is one of our constraints because there is a lack of a &#39;gold standar
 ![Context Diagram](/Images/ContextDiagram.PNG)
 
 Logical Data Structure
+![Logical Data Structure](/Images/LDS.PNG)
 
 
 State Machine for User accessed web page
-
+![State Machine](/Images/StateMachineWebPage.PNG)
 
 **6. Preliminary Schedule**
 
 Below is a GANTT chart detailing our expected start/stop dates for each task that is required for this product. We intend to adopt an agile approach to our development by dividing tasks between ourselves and later merging their functionality.
-
+![GANTT](/Images/GANTT.PNG)
 
 **7. Appendices**
 
