@@ -372,7 +372,7 @@ Testing is one of our constraints because there is a lack of a &#39;gold standar
 # 4. System Architecture
 
 4.1 System Architecture diagram
-![System Architecture Diagram](/Images/SystemArchitectureDiagram.PNG)
+![System Architecture Diagram](/Images/SystemArchitectureDesign.PNG)
 
 
 **Website:** The website that is visited by the user. Our product will determine if the website visited by the user is a valid website that the product can begin parsing and analysing text.
