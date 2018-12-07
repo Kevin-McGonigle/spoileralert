@@ -401,6 +401,7 @@ State Machine for User accessed web page
 **6. Preliminary Schedule**
 
 Below is a GANTT chart detailing our expected start/stop dates for each task that is required for this product. We intend to adopt an agile approach to our development by dividing tasks between ourselves and later merging their functionality.
+
 ![GANTT](/Images/Gantt.PNG)
 
 **7. Appendices**
