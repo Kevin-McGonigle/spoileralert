@@ -146,10 +146,10 @@ There are several scenarios to consider over the course of our development.
 | **Failed End Condition** | The spoiler is not hidden behind a graphic overlay. |
 | **Actors** | User, System |
 | **Trigger** | A spoiler was detected when analysing the HTML. |
-| **Description** | **Step** | **Action** |
-|   | 1 | Find the element that contains the spoiler in the HTML. |
-|   | 2 | Determine the appropriate size for the graphical overlay. |
-|   | 3 | Apply the graphical overlay over the HTML element. |
+| **Description** | **Action** |
+| 1 | Find the element that contains the spoiler in the HTML. |
+| 2 | Determine the appropriate size for the graphical overlay. |
+| 3 | Apply the graphical overlay over the HTML element. |
 
 #### 2.3.2.1 Reveal a Spoiler
 
@@ -160,9 +160,9 @@ There are several scenarios to consider over the course of our development.
 | **Success End Condition** | The graphical overlay is removed and the spoiler is shown. |
 | **Failed End Condition** | The graphical overlay is not successfully removed. |
 | **Actors** | User, System |
-| **Trigger** | The user clicks the &quot;Reveal&quot; button on the graphical overlay |
-| **Description** | **Step** | **Action** |
-|   | 1 | Remove the graphical overlay. |
+| **Trigger** | The user clicks the "Reveal" button on the graphical overlay |
+| **Description** | **Action** |
+| 1 | Remove the graphical overlay. |
 
 ### 2.3.3 Block Entire Web Page
 
@@ -176,15 +176,15 @@ In the case where a large number of spoilers are detected, the user will be fore
 | **Failed End Condition** | The user is not presented with a fully functional intermediate warning screen. |
 | **Actors** | User, System |
 | **Trigger** | Web page is detected to contain many spoilers. |
-| **Description** | **Step** | **Action** |
-|   | 1 | Redirect the user to the intermediate warning screen. |
-|   | 2 | Wait for user&#39;s input on warning screen. |
-|   | 3 | Return to the previous website. |
-| **Extensions** | **Step** | **Branching Action** |
-|   | 3a | Proceed to the desired web page without blocking the detected spoilers. |
-|   | 3b | Proceed to the desired web page, blocking all detected spoilers in the process. |
-| **Variations** | **Step** | **Branching Action** |
-|   | 2 | The user may choose from any of the following options:
+| **Description** | **Action** |
+| 1 | Redirect the user to the intermediate warning screen. |
+| 2 | Wait for user's input on warning screen. |
+| 3 | Return to the previous website. |
+| **Extensions** | **Branching Action** |
+| 3a | Proceed to the desired web page without blocking the detected spoilers. |
+| 3b | Proceed to the desired web page, blocking all detected spoilers in the process. |
+| **Variations** | **Branching Action** |
+| 2 | The user may choose from any of the following options:
 - Return to safety
 - Proceed to web page without blocking
 - Proceed to web page with blocking
@@ -199,10 +199,10 @@ In the case where a large number of spoilers are detected, the user will be fore
 | **Success End Condition** | The user is redirected back to the previous page. |
 | **Failed End Condition** | The user is not redirected back to the previous page. |
 | **Actors** | User, System |
-| **Trigger** | The user has clicked the &quot;Return To Safety&quot; option. |
-| **Description** | **Step** | **Action** |
-|   | 1 | Obtain the URL of the previous website. |
-|   | 2 | Redirect the user to this website. |
+| **Trigger** | The user has clicked the "Return To Safety" option. |
+| **Description** | **Action** |
+| 1 | Obtain the URL of the previous website. |
+| 2 | Redirect the user to this website. |
 
 #### 2.3.3.2 Proceed with Spoilers Blocked
 
@@ -213,10 +213,10 @@ In the case where a large number of spoilers are detected, the user will be fore
 | **Success End Condition** | The web page is displayed with all spoilers blocked. |
 | **Failed End Condition** | The web page is not displayed or is displayed with spoilers not being blocked |
 | **Actors** | User, System |
-| **Trigger** | The user has clicked the &quot;Proceed with Spoilers Blocked&quot; option. |
-| **Description** | **Step** | **Action** |
-|   | 1 | Block every detected spoiler on the page as described in use case 2.3.2. |
-|   | 2 | Display the web page. |
+| **Trigger** | The user has clicked the "Proceed with Spoilers Blocked" option. |
+| **Description** | **Action** |
+| 1 | Block every detected spoiler on the page as described in use case 2.3.2. |
+| 2 | Display the web page. |
 
 #### 2.3.3.3 Proceed without Spoilers Blocked
 
@@ -227,9 +227,9 @@ In the case where a large number of spoilers are detected, the user will be fore
 | **Success End Condition** | The web page is displayed with all spoilers not hidden. |
 | **Failed End Condition** | The web page is not displayed or is displayed with spoilers hidden. |
 | **Actors** | User, System |
-| **Trigger** | The user has clicked the &quot;Proceed without Spoilers Blocked&quot; option. |
-| **Description** | **Step** | **Action** |
-|   | 1 | Display the web page |
+| **Trigger** | The user has clicked the "Proceed without Spoilers Blocked" option. |
+| **Description** | **Action** |
+| 1 | Display the web page |
 
 ### 2.3.4 Disable SpoilerAlert
 
@@ -240,10 +240,10 @@ In the case where a large number of spoilers are detected, the user will be fore
 | **Success End Condition** | SpoilerAlert is disabled. |
 | **Failed End Condition** | SpoilerAlert remains enabled. |
 | **Actors** | User, System |
-| **Trigger** | The user has clicked &quot;Disable SpoilerAlert&quot; in the extension&#39;s menu. |
-| **Description** | **Step** | **Action** |
-|   | 1 | Prevent SpoilerAlert from running. |
-|   | 2 | Change the Disable option to Enable. |
+| **Trigger** | The user has clicked &quot;Disable SpoilerAlert&quot; in the extension's menu. |
+| **Description** | **Action** |
+| 1 | Prevent SpoilerAlert from running. |
+| 2 | Change the Disable option to Enable. |
 
 ### 2.3.5 Enable SpoilerAlert
 
@@ -255,9 +255,9 @@ In the case where a large number of spoilers are detected, the user will be fore
 | **Failed End Condition** | SpoilerAlert remains disabled. |
 | **Actors** | User, System |
 | **Trigger** | The user has clicked &quot;Enable SpoilerAlert&quot; in the extension&#39;s menu. |
-| **Description** | **Step** | **Action** |
-|   | 1 | Resume SpoilerAlert&#39;s function |
-|   | 2 | Change the Enable option to Disable. |
+| **Description**| **Action** |
+| 1 | Resume SpoilerAlert'&#39;'s function |
+| 2 | Change the Enable option to Disable. |
 
 ### 2.3.6 Whitelist a Website/Web Page
 
@@ -269,9 +269,9 @@ In the case where a large number of spoilers are detected, the user will be fore
 | **Failed End Condition** | The website is not added to the whitelist. Spoilers remain hidden. |
 | **Actors** | User, System |
 | **Trigger** | The user has selected the &quot;Whitelist the Current Website&quot; |
-| **Description** | **Step** | **Action** |
-|   | 1 | Present the user with a prompt to specify how specific they wish the whitelist entry to be (ie. entire website or specific page(s)) |
-|   | 2 | Update the whitelist to include the specified pattern. |
+| **Description** | **Action** |
+| 1 | Present the user with a prompt to specify how specific they wish the whitelist entry to be (ie. entire website or specific page(s)) |
+| 2 | Update the whitelist to include the specified pattern. |
 
 ## 2.4 Constraints
 
