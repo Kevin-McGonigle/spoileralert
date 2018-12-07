@@ -373,8 +373,13 @@ Testing is one of our constraints because there is a lack of a "gold standard" d
 
 #5. High-Level Design
 
+<<<<<<< HEAD
 ##Context Diagram
 
+=======
+**Context Diagram**
+![Context Diagram](/Images/ContextDiagram.PNG)
+>>>>>>> a4a3e9d3797e350deea3fbc8348d3984be43124f
 
 ##Logical Data Structure##
 
