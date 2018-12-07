@@ -123,18 +123,18 @@ There are several scenarios to consider over the course of our development.
 | **Failed End Condition** | One or more spoilers remain undetected. |
 | **Actors** | User, System |
 | **Trigger** | A new web page that is not whitelisted is loaded. |
-| **Description** | **Step** | **Action** |
-|   | 1 | Traverse each textual element of the HTML for the web page. |
-|   | 2 | For each element, search for references to MCU or GoT characters, places or universe-specific language by querying the IMDb database. |
-|   | 3 | Append the element to a list of elements that contain relevant references. |
-|   | 4 | For each element in the above list, using NLP, determine whether or not the text is judged as a spoiler or not. |
-|   | 5 | Append the element to a list of elements that contain spoilers, to subsequently be blocked. |
-| **Extensions** | **Step** | **Branching Action** |
-|   | 3a | Disregard the element as it does not reference MCU or GoT. |
-|   | 5a | Disregard the element as it has been judged as not containing a spoiler. |
-| **Variations** | **Step** | **Branching Action** |
-|   | 2 | An element can either contain no reference to MCU or GoT, a reference to MCU, a reference to GoT or (very rarely) a reference to both. |
-|   | 4 | An element may either contain a spoiler or not. |
+| **Description** | **Action** |
+| 1 | Traverse each textual element of the HTML for the web page. |
+| 2 | For each element, search for references to MCU or GoT characters, places or universe-specific language by querying the IMDb database. |
+| 3 | Append the element to a list of elements that contain relevant references. |
+| 4 | For each element in the above list, using NLP, determine whether or not the text is judged as a spoiler or not. |
+| 5 | Append the element to a list of elements that contain spoilers, to subsequently be blocked. |
+| **Extensions** | **Branching Action** |
+| 3a | Disregard the element as it does not reference MCU or GoT. |
+| 5a | Disregard the element as it has been judged as not containing a spoiler. |
+| **Variations** | **Branching Action** |
+| 2 | An element can either contain no reference to MCU or GoT, a reference to MCU, a reference to GoT or (very rarely) a reference to both. |
+| 4 | An element may either contain a spoiler or not. |
 
 ### 2.3.2 Block A Spoiler
 
