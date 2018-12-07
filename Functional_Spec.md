@@ -49,9 +49,9 @@ page
 
 **7. Appendices**
 
-#1. Introduction
+# 1. Introduction
 
-##1.1 Overview
+## 1.1 Overview
 
 Our chosen third year project is to design and implement a Google Chrome extension called SpoilerAlert that will detect and block text-based spoilers for the Marvel Cinematic Universe (MCU) and Game of Thrones (GoT) on a web page.
 
