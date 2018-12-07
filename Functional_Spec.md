@@ -386,19 +386,22 @@ Testing is one of our constraints because there is a lack of a &#39;gold standar
 # 5. High-Level Design
 
 **Context Diagram**
+
 ![Context Diagram](/Images/ContextDiagram.PNG)
 
 Logical Data Structure
+
 ![Logical Data Structure](/Images/LDS.PNG)
 
 
 State Machine for User accessed web page
+
 ![State Machine](/Images/StateMachineWebPage.PNG)
 
 **6. Preliminary Schedule**
 
 Below is a GANTT chart detailing our expected start/stop dates for each task that is required for this product. We intend to adopt an agile approach to our development by dividing tasks between ourselves and later merging their functionality.
-![GANTT](/Images/GANTT.PNG)
+![GANTT](/Images/Gantt.PNG)
 
 **7. Appendices**
 
