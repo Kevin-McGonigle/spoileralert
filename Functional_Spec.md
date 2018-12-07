@@ -317,7 +317,7 @@ Testing is one of our constraints because there is a lack of a "gold standard" d
 ##3.4 Warning the user before entering a web page with several spoilers
 
 - Description: Should the extension determine that the web page that the user is loading contains several spoilers, an intermediate screen should be displayed before the web page is displayed to inform the user that the page has many spoilers. The user will then be given the option to return to the previous page, to proceed to the website with the spoilers blocked or to proceed with no blocking.
-- Criticality: This is a feature we would ideally like to implement, but is not strictly necessary to the system&#39;s success. Therefore it will have a lower priority than previous requirements.
+- Criticality: This is a feature we would ideally like to implement, but is not strictly necessary to the system's success. Therefore it will have a lower priority than previous requirements.
 - Technical Issues: We must figure out how to redirect the browser to display this screen before the web page itself is displayed and implement each subsequent option to provide the desired functionality.
 - Dependencies with other requirements: For this to work, requirements 3.1 and 3.2 must me implemented successfully. For the option to progress with spoilers blocked, 3.3 must also be functional.
 
@@ -344,14 +344,14 @@ Testing is one of our constraints because there is a lack of a "gold standard" d
 
 ##3.5 Enable/Disable the extension
 
-- Description: The user will have to option to disable and re-enable the extension as they see fit from the extension&#39;s menu (accessed by clicking the extension&#39;s icon in the top right of the browser). Disabling the extension will prevent any spoilers from being blocked until the extension is re-enabled.
+- Description: The user will have to option to disable and re-enable the extension as they see fit from the extension's menu (accessed by clicking the extension's icon in the top right of the browser). Disabling the extension will prevent any spoilers from being blocked until the extension is re-enabled.
 - Criticality: This is a feature we would ideally like to implementbut it is very much external to the main goal of the extension and should therefore be viewed as optional.
 - Technical Issues: The only slight issue that may be encountered with this requirement is ensuring that the state of the extension is stored and used again the next time the browser is opened.
 - Dependencies with other requirements: This feature will have the ability to disable the functionality of requirements 3.1 - 3.4.
 
 ##3.6 Adding a website/web page to the whitelist
 
-- Description: The user will be able to add the current website/web page they are on to SpoilerAlert&#39;s whitelist, which will prevent spoilers from being blocked on that site/page in future. This will be done by choosing the &quot;Whitelist the Current Website&quot; option in the extension&#39;s menu and choosing the specificity of the pattern to whitelist in a subsequent prompt.
+- Description: The user will be able to add the current website/web page they are on to SpoilerAlert's whitelist, which will prevent spoilers from being blocked on that site/page in future. This will be done by choosing the "Whitelist the Current Website" option in the extension's menu and choosing the specificity of the pattern to whitelist in a subsequent prompt.
 - Criticality: This feature is very much a peripheral feature and should not be implemented until the more essential requirements have been fulfilled.
 - Technical Issues: The issue with this feature is similar to that of requirement 3.5 in that the whitelist must be stored for later use.
 - Dependencies with other requirements: This feature requires features 3.1 - 3.4 to be implemented.
@@ -362,6 +362,7 @@ Testing is one of our constraints because there is a lack of a "gold standard" d
 
 ##4.1 System Architecture diagram
 
+![System Architecture Diagram](/Images/SystemArchitectureDesign.PNG)
 
 **Website:** The website that is visited by the user. Our product will determine if the website visited by the user is a valid website that the product can begin parsing and analysing text.
 
@@ -373,24 +374,23 @@ Testing is one of our constraints because there is a lack of a "gold standard" d
 
 #5. High-Level Design
 
-<<<<<<< HEAD
 ##Context Diagram
 
-=======
-**Context Diagram**
 ![Context Diagram](/Images/ContextDiagram.PNG)
->>>>>>> a4a3e9d3797e350deea3fbc8348d3984be43124f
 
 ##Logical Data Structure##
 
+![Logical Data Structure](/Images/LDS.PNG)
 
 ##State Machine for User accessed web page##
 
+![State Machine](/Images/StateMachineWebPage.PNG)
 
 #6. Preliminary Schedule
 
 Below is a GANTT chart detailing our expected start/stop dates for each task that is required for this product. We intend to adopt an agile approach to our development by dividing tasks between ourselves and later merging their functionality.
 
+![GANTT](/Images/Gantt.PNG)
 
 #7. Appendices#
 
