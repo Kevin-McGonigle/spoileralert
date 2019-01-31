@@ -1,1 +1,1 @@
-alert("Hello world");
+alert("if (spoilers) {block()}");

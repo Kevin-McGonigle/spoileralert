@@ -1,7 +1,7 @@
 {
     "name": "SpoilerAlert",
     "version": "1.0",
-    "description": "Blocks spoilers for the Marvel Cinematic Universe or Game of Thrones",
+    "description": "Blocks spoilers for the Marvel Cinematic Universe and Game of Thrones",
     "manifest_version": 2,
 
     "background": {
@@ -12,13 +12,12 @@
     },
 
 
-    "page_action": {
+    "browser_action": {
         "default_popup": "./popup.html",
         "default_icon": {
             "16": "./images/stop.png"
         }
     },
-
 
     "icons": {
         "16": "./images/stop.png"
@@ -32,5 +31,5 @@
     ],
     "js": ["content.js"]
   }
-]
+	]
 }
