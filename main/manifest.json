@@ -1,35 +1,33 @@
 {
-    "name": "SpoilerAlert",
-    "version": "1.0",
-    "description": "Blocks spoilers for the Marvel Cinematic Universe and Game of Thrones",
-    "manifest_version": 2,
+  "name": "SpoilerAlert",
+  "version": "1.0",
+  "description": "Blocks spoilers for the Marvel Cinematic Universe and Game of Thrones",
+  "manifest_version": 2,
 
-    "background": {
-        "scripts": [
-            "background.js"
-        ],
-        "persistent": false
-    },
-
-
-    "browser_action": {
-        "default_popup": "./popup.html",
-        "default_icon": {
-            "16": "./images/stop.png"
-        }
-    },
-
-    "icons": {
-        "16": "./images/stop.png"
-    },
-
-
-    "content_scripts": [
-  {
-    "matches": [
-      "https://www.joe.ie/*"
+  "background": {
+    "scripts": [
+      "background.js"
     ],
-    "js": ["content.js"]
-  }
-	]
+    "persistent": false
+  },
+
+
+  "browser_action": {
+    "default_popup": "./popup.html",
+    "default_icon": {
+      "16": "./images/stop.png"
+    }
+  },
+
+  "icons": {
+    "16": "./images/stop.png"
+  },
+
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.joe.ie/*"],
+      "js": ["content.js"]
+    }
+  ]
 }
