@@ -199,7 +199,6 @@ episode #8.3
 episode #8.4
 episode #8.5
 episode #8.6
-birgitte hjort sã¸rensen
 leo lefford
 amory lorch
 meereenese champion
@@ -213,7 +212,6 @@ christopher newman
 tony flynn
 turner
 graham charles
-dothraki bloodrider #1
 aidan gillen
 jim broadbent
 cersei lannister
@@ -221,7 +219,6 @@ gerold hightower
 richard brake
 paul rattray
 tim landers
-kings landing rioter #2
 akho
 simon stewart
 neil fingleton
@@ -229,7 +226,6 @@ laurence doherty
 kevin keenan
 tyene sand
 ivan peric
-musician #3
 qhono
 thin man
 dongo the giant
@@ -247,7 +243,6 @@ biter
 winterfell shepherd
 aeron greyjoy
 donnel waynwood
-little bird #4
 tormund giantsbane
 charlotte hope
 hot pie
@@ -266,7 +261,6 @@ eddie eyre
 fintan mckeown
 jorah mormont
 qhorin halfhand
-great master #2
 harald karstark
 margaret john
 lino facioli
@@ -292,7 +286,6 @@ wildling
 gerry o'brien
 missandei
 hannah murray
-goldcloak #1
 zalla
 high priestess
 anton lesser
@@ -339,7 +332,6 @@ tobias winter
 brea
 miltos yerolemou
 abducted
-goldcloak #2
 lady cerwyn
 alys karstark
 meena rayann
@@ -352,7 +344,6 @@ joseph naufahu
 septon
 ian beattie
 slavko juraga
-jã³hannes haukur jã³hannesson
 alexander siddig
 mhaegen
 owen teale
@@ -376,7 +367,6 @@ mark coney
 arthur dayne
 young ned stark
 arryn
-frey soldier #2
 staz nair
 jaremy rykker
 marcus lamb
@@ -402,7 +392,6 @@ othor
 todder
 indira varma
 junade khan
-king's landing rioter #3
 peter vaughan
 craster
 michael hayes
@@ -438,7 +427,6 @@ hizdahr zo loraq
 eon
 qotho
 renly baratheon
-king's landing rioter #2
 dagmer cleftjaw
 shireen baratheon
 steve
@@ -452,7 +440,6 @@ daniel portman
 olyvar
 bart the bear
 irri
-musician #2
 obara sand
 loras tyrell
 ivailo dimitrov
@@ -519,7 +506,6 @@ bobby asghar
 david michael scott
 brenock o'connor
 sabrina bartlett
-white walker #2
 loboda
 jacob anderson
 izembaro
@@ -530,7 +516,6 @@ mandon moore
 luke barnes
 nathanael saleh
 kayla
-loyal night's watchman #1
 soldier tom
 paul caddell
 rakharo
@@ -553,7 +538,6 @@ hallyne
 alton lannister
 stephen dillane
 andrew wilde
-great master #3
 yuri kolokolnikov
 bert aramayo
 rhaegar targaryen
@@ -563,14 +547,12 @@ reece noi
 alliser thorne
 pixie le knot
 michael nevin
-little bird #7
 aisling franciosi
 david rintoul
 clive mantle
 baratheon guard
 grand maester pycelle
 rickard karstark
-kings landing rioter #1
 nikolaj coster-waldau
 hugo culverhouse
 targaryen
@@ -584,13 +566,11 @@ jer o'leary
 varly
 child of the forest
 wilko johnson
-hafã¾ã³r jãºlã­us bjã¶rnsson
 ilyn payne
 tara fitzgerald
 nikovich sammut
 maggy
 vala
-musician #5
 deobia oparei
 king renly baratheon dwarf
 oona chaplin
@@ -619,7 +599,6 @@ dean whatton
 steven cole
 jodhi may
 yoren
-frey soldier #1
 pyat pree
 ian whyte
 stiv
@@ -675,11 +654,9 @@ silk king
 lancel lannister
 the waif
 young cersei lannister
-loyal night's watchman #2
 ellie kendrick
 michael hooley
 black lorren
-great master #5
 randyll tarly
 cliff barry
 high sparrow
@@ -700,7 +677,6 @@ shagga
 young ned
 tywin lannister
 gordy
-little bird #3
 roy dotrice
 drennan
 robert fawsitt
@@ -744,7 +720,6 @@ alfie allen
 quaithe
 guymon
 tony way
-little bird #5
 oznak zo pahl
 kings landing rioters
 othell yarwyck
@@ -753,7 +728,6 @@ paddy rocks
 bolton officer
 illyrio mopatis
 ron donachie
-great master #1
 sam coleman
 jessica henwick
 empstead wright
@@ -852,7 +826,6 @@ kristian nairn
 damphair
 iggo
 elizabeth cadwallader
-great master #4
 emilio doorgasingh
 osha
 mark stanley
@@ -861,7 +834,6 @@ emun elliott
 ned
 steve cash
 gary pillai
-great master #7
 king joffrey baratheon dwarf
 pack of wights
 willem lannister
@@ -869,20 +841,16 @@ lyanna stark
 amrita acharia
 manservant
 john standing
-great master #6
 jon thor birgisson
 kegs
 lalor roddy
 mirelle
-night's watchman #1
 young rodrik cassel
 ricky champ
 waymar royce
 andy kellegher
 karl davies
-ragnar ãžã³rhallsson
 dominic carter
-kings landing rioter #3
 lothar frey
 barristan selmy
 rhaella targaryen
@@ -900,7 +868,6 @@ ellaria sand
 david verrey
 grey wind
 jeor mormont
-night's watchman #2
 prendahl na ghezn
 david bradley
 timothy gibbons
@@ -920,7 +887,6 @@ rhaenys targaryen
 elyes gabel
 will tudor
 wun wun
-sigur rã³s
 rebecca benson
 lord portan
 bolton
@@ -929,14 +895,12 @@ lysa arryn
 phil dixon
 vinnie mccabe
 gared
-musician #1
 selyse baratheon
 pedro pascal
 citadel maester
 spencer wilding
 little birds
 styr
-musician #4
 marillion
 sibel kekilli
 oengus macnamara
@@ -952,11 +916,9 @@ nicholas blane
 balon greyjoy
 the mountain
 patrick j molloy
-king's landing rioter #1
 igg
 edward dogliani
 reg wayment
-little bird #6
 rast
 old man
 maester caleotte
@@ -993,7 +955,6 @@ the bear
 jonos bracken
 patrick malahide
 gilly
-dothraki bloodrider #2
 williams
 thomas brodie-sangster
 ian hanmore
