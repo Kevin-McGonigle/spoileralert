@@ -2,6 +2,8 @@ winter is coming
 tyrion
 cersei
 daenerys
+game of thrones
+blackwater
 jon
 sansa
 arya
@@ -711,6 +713,11 @@ illyrio
 dongo
 marei
 ruairã
+dany
+sam
+hand of the king
+hella
+night king
 ros
 hotah
 brandon
@@ -858,7 +865,6 @@ the ghost of harrenhal
 the old gods and the new
 a man without honor
 the prince of winterfell
-blackwater
 valar morghulis
 valar dohaeris
 dark wings, dark words
