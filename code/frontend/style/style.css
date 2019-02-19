@@ -1,8 +1,4 @@
-.overlay {
-  position: fixed; /* Sit on top of the page content */
-  display: none; /* Hidden by default */
-  width:785px;
-  height: 19px; /* Full height (cover the whole page) */
-  background-color: red; /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+.main {
+	width: 60%;
+	margin:auto;
 }
