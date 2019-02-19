@@ -25,7 +25,7 @@ function createOverlays(){
 function findElements(list, index){
 	var rect = list[index].getBoundingClientRect()
 	var width = rect.right - rect.left
-	return [rect.top, rect.left, width];
+	return [rect.top, rect.left];
 }
 
 // From stack overflow at https://stackoverflow.com/questions/118241/calculate-text-width-with-javascript
