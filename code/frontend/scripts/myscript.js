@@ -1,28 +1,43 @@
 function createOverlays(){
 	totalElements = getTotalElements()
+	var overlays = []
 
 	for (i = 0; i < totalElements.length; i++)  // For each element, generate an overlay div, position it, style it and append it to the document
 	{	
 		points = findCoordinates(totalElements, i)
-		var div = document.createElement("div") // Create the div
-		div.className = "overlay"
+		var overlayDiv = document.createElement("Div") // Create the overlayDiv
+		overlayDiv.className = "overlay"
 
 
-		var width = getTextWidth(totalElements[i].textContent, "12pt open sans")	// open sans is used on joe.ie, 12pt seems to be the standard for websites. 
-		div.style.width = Math.ceil(points[3]) + "px" // set the position of the div
-		div.style.top = Math.ceil(points[0]) + "px"
-		div.style.left = Math.ceil(points[1]) + "px"
-		div.style.height = Math.ceil(points[2]) + "px"
-		div.style.border = "3px solid black"
-		div.style.borderRadius = "5px"
+		//var width = getTextWidth(totalElements[i].textContent, "12pt open sans")	// open sans is used on joe.ie, 12pt seems to be the standard for websites. 
+		overlayDiv.style.width = Math.ceil(points[3]) + "px" // set the position of the overlayDiv
+		overlayDiv.style.top = Math.ceil(points[0]) + "px"
+		overlayDiv.style.left = Math.ceil(points[1]) + "px"
+		overlayDiv.style.height = Math.ceil(points[2]) + "px"
+		overlayDiv.style.border = "3px solid black"
+		overlayDiv.style.borderRadius = "5px"
 
-		div.style.background = "grey" // Style the div
-		div.style.display = "none"   // Default to none, this is later changed by the on() function
-		div.style.position = "fixed"
+		overlayDiv.style.background = "grey" // Style the overlayDiv
+		overlayDiv.style.display = "none"   // Default to none, this is later changed by the turnOneoverlayDivOn() function
+		overlayDiv.style.position = "fixed"
 		
-		document.body.appendChild(div)
-		on(div)
+		overlays.push(overlayDiv)
+		document.body.appendChild(overlayDiv)
+		turnOneDivOn(overlays, i)
+
+		var disableButton = document.createElement("button")	// make a button for removing the div
+		disableButton.innerHTML = "Disable"
+		disableButton.className = "disable"
+
+		disableButton.style.top = "-4px"
+		disableButton.style.left = "-75px"
+
+
+		overlayDiv.appendChild(disableButton)
+
+
 	}
+	return overlays
 }
 
 
@@ -37,6 +52,7 @@ function getTotalElements(){
 	return totalElements
 }
 
+
 function findCoordinates(list, index){
 	var rect = list[index].getBoundingClientRect()
 	var height = rect.bottom - rect.top
@@ -44,24 +60,23 @@ function findCoordinates(list, index){
 	return [rect.top, rect.left, height, width];
 }
 
-// From stack overflow at https://stackoverflow.com/questions/118241/calculate-text-width-with-javascript
-function getTextWidth(text, font) {
-    // re-use canvas object for better performance
-    var canvas = getTextWidth.canvas || (getTextWidth.canvas = document.createElement("canvas"));
-    var context = canvas.getContext("2d");
-    context.font = font;
-    var metrics = context.measureText(text);
-    return metrics.width;
+function turnOneDivOn(overlaysList, i) {
+  	overlaysList[i].style.display = "block"
 }
 
-function on(div) {
-  	div.style.display = "block"
+function turnOneDivOff(overlaysList, i){
+	var list = document.getElementsByClassName("overlay")
+	list[i].style.display = "none"
 }
 
-function off() {
+function disableBlocking(){		// Stops all blocking of text
 	var list = document.getElementsByClassName("overlay")
 	for (i = 0; i < list.length; i++)
 	{
 		list[i].style.display = "none"
 	}
+}
+
+window.onload = function(){
+	overlays = createOverlays()
 }
