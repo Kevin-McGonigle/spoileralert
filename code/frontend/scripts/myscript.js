@@ -9,15 +9,14 @@ function createOverlays(){
 		overlayDiv.className = "overlay"
 
 
-		//var width = getTextWidth(totalElements[i].textContent, "12pt open sans")	// open sans is used on joe.ie, 12pt seems to be the standard for websites. 
 		overlayDiv.style.width = Math.ceil(points[3]) + "px" // set the position of the overlayDiv
 		overlayDiv.style.top = Math.ceil(points[0]) + "px"
 		overlayDiv.style.left = Math.ceil(points[1]) + "px"
 		overlayDiv.style.height = Math.ceil(points[2]) + "px"
-		overlayDiv.style.border = "3px solid black"
-		overlayDiv.style.borderRadius = "5px"
 
-		overlayDiv.style.background = "grey" // Style the overlayDiv
+		overlayDiv.style.border = "2px solid black" 	// Style the overlay
+		overlayDiv.style.borderRadius = "5px"
+		overlayDiv.style.background = "lightgrey" 
 		overlayDiv.style.display = "none"   // Default to none, this is later changed by the turnOneoverlayDivOn() function
 		overlayDiv.style.position = "fixed"
 		
@@ -26,18 +25,15 @@ function createOverlays(){
 		turnOneDivOn(overlays, i)
 
 		var disableButton = document.createElement("button")	// make a button for removing the div
-		disableButton.innerHTML = "Disable"
+		disableButton.innerHTML = "Reveal"
 		disableButton.className = "disable"
+		disableButton.onclick = function() {removeOverlay(this)}
 
 		disableButton.style.top = "-4px"
 		disableButton.style.left = "-75px"
 
-
 		overlayDiv.appendChild(disableButton)
-
-
 	}
-	return overlays
 }
 
 
@@ -52,6 +48,10 @@ function getTotalElements(){
 	return totalElements
 }
 
+function removeOverlay(button){
+	button.parentElement.style.display = "none"		// Get the parent div of the button and set display to none
+}
+
 
 function findCoordinates(list, index){
 	var rect = list[index].getBoundingClientRect()
@@ -64,13 +64,8 @@ function turnOneDivOn(overlaysList, i) {
   	overlaysList[i].style.display = "block"
 }
 
-function turnOneDivOff(overlaysList, i){
-	var list = document.getElementsByClassName("overlay")
-	list[i].style.display = "none"
-}
-
 function disableBlocking(){		// Stops all blocking of text
-	var list = document.getElementsByClassName("overlay")
+	var list = document.getElementsByClassName("overlay")	// Every overlay div is given the class "overlay" in the createOverlays function above
 	for (i = 0; i < list.length; i++)
 	{
 		list[i].style.display = "none"
@@ -78,5 +73,5 @@ function disableBlocking(){		// Stops all blocking of text
 }
 
 window.onload = function(){
-	overlays = createOverlays()
+	createOverlays()
 }
