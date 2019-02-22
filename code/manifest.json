@@ -1,7 +1,7 @@
 {
     "name": "SpoilerAlert",
     "version": "1.0",
-    "description": "Blocks spoilers for the Marvel Cinematic Universe and Game of Thrones",
+    "description": "Blocks spoilers for Game of Thrones",
     "manifest_version": 2,
 
     "background": {

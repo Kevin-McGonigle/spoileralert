@@ -1,6 +1,5 @@
 function createOverlays(){
 	totalElements = getTotalElements()
-	var overlays = []
 
 	for (i = 0; i < totalElements.length; i++)  // For each element, generate an overlay div, position it, style it and append it to the document
 	{	
@@ -8,21 +7,19 @@ function createOverlays(){
 		var overlayDiv = document.createElement("Div") // Create the overlayDiv
 		overlayDiv.className = "overlay"
 
-
 		overlayDiv.style.width = Math.ceil(points[3]) + "px" // set the position of the overlayDiv
-		overlayDiv.style.top = Math.ceil(points[0]) + "px"
-		overlayDiv.style.left = Math.ceil(points[1]) + "px"
+		overlayDiv.style.top = Math.ceil(points[0]) + "px" 
+		overlayDiv.style.left = (Math.ceil(points[1]))+ "px"
 		overlayDiv.style.height = Math.ceil(points[2]) + "px"
 
 		overlayDiv.style.border = "2px solid black" 	// Style the overlay
 		overlayDiv.style.borderRadius = "5px"
 		overlayDiv.style.background = "lightgrey" 
 		overlayDiv.style.display = "none"   // Default to none, this is later changed by the turnOneoverlayDivOn() function
-		overlayDiv.style.position = "fixed"
-		
-		overlays.push(overlayDiv)
+		overlayDiv.style.position = "absolute"		// Must not be "fixed" as "fixed" means that the overlay div doesn't scroll with the text its hiding 
+
 		document.body.appendChild(overlayDiv)
-		turnOneDivOn(overlays, i)
+		turnOneDivOn(overlayDiv)
 
 		var disableButton = document.createElement("button")	// make a button for removing the div
 		disableButton.innerHTML = "Reveal"
@@ -30,7 +27,7 @@ function createOverlays(){
 		disableButton.onclick = function() {removeOverlay(this)}
 
 		disableButton.style.top = "-4px"
-		disableButton.style.left = "-75px"
+		disableButton.style.left = "-85px"
 
 		overlayDiv.appendChild(disableButton)
 	}
@@ -49,9 +46,8 @@ function getTotalElements(){
 }
 
 function removeOverlay(button){
-	button.parentElement.style.display = "none"		// Get the parent div of the button and set display to none
+	button.parentElement.style.visibility = "hidden"	// Hide the overlay
 }
-
 
 function findCoordinates(list, index){
 	var rect = list[index].getBoundingClientRect()
@@ -60,8 +56,8 @@ function findCoordinates(list, index){
 	return [rect.top, rect.left, height, width];
 }
 
-function turnOneDivOn(overlaysList, i) {
-  	overlaysList[i].style.display = "block"
+function turnOneDivOn(div) {
+  	div.style.display = "block"
 }
 
 function disableBlocking(){		// Stops all blocking of text
