@@ -5,40 +5,41 @@ function createOverlays(){
 
 	for (i = 0; i < totalElements.length; i++)  // For each element, generate an overlay div, position it, style it and append it to the document
 	{	
-		points = findCoordinates(totalElements, i)
-		var overlayDiv = document.createElement("Div") // Create the overlayDiv
-		overlayDiv.className = "overlay"
+		if (totalElements[i].innerHTML 	!= "")	// There are empty p tags on joe.ie, we should ignore them
+		{
+			points = findCoordinates(totalElements, i)
+			var overlayDiv = document.createElement("Div") 		// Create the overlayDiv
+			overlayDiv.className = "overlay"
 
 
-		overlayDiv.style.width = Math.ceil(points[3]) + "px" // set the position of the overlayDiv
-		overlayDiv.style.top = Math.ceil(points[0]) + "px"
-		overlayDiv.style.left = (Math.ceil(points[1]) - 10) + "px"
-		overlayDiv.style.height = Math.ceil(points[2]) + "px"
+			overlayDiv.style.width = Math.ceil(points[3]) + "px" // set the position of the overlayDiv
+			overlayDiv.style.top = Math.ceil(points[0]) + "px"
+			overlayDiv.style.left = (Math.ceil(points[1]) - 10) + "px"
+			overlayDiv.style.height = Math.ceil(points[2]) + "px"
 
-		overlayDiv.style.border = "2px solid black" 	// Style the overlay
-		overlayDiv.style.borderRadius = "5px"
-		overlayDiv.style.background = "lightgrey" 
-		overlayDiv.style.position = "absolute"
-		overlayDiv.style.zIndex = "2"			// Must be set to 2, this places the overlay above the text
-		
-		document.body.appendChild(overlayDiv)
-		turnOneDivOn(overlayDiv)
+			overlayDiv.style.border = "2px solid black" 	// Style the overlay
+			overlayDiv.style.borderRadius = "5px"
+			overlayDiv.style.background = "lightgrey" 
+			overlayDiv.style.position = "absolute"
+			overlayDiv.style.zIndex = "2"			// Must be set to 2, this places the overlay above the text
+			
+			document.body.appendChild(overlayDiv)
+			turnOneDivOn(overlayDiv)
 
-		var disableButton = document.createElement("button")	// make a button for removing the div
-		disableButton.innerHTML = "Reveal"
-		disableButton.className = "disable"
-		disableButton.style.position = "relative"
+			var disableButton = document.createElement("button")	// make a button for removing the div
+			disableButton.innerHTML = "Reveal"
+			disableButton.className = "disable"
+			disableButton.style.position = "relative"
 
-		//Style the button
-		disableButton.style.right = "75px"
-		disableButton.style.width = "65px"
-		disableButton.style.height = "25px"
-		disableButton.style.background = "salmon"
+			//Style the button
+			disableButton.style.right = "75px"
+			disableButton.style.width = "65px"
+			disableButton.style.height = "25px"
+			disableButton.style.background = "salmon"
 
-
-
-		disableButton.onclick = function() {removeOverlay(this)}
-		overlayDiv.appendChild(disableButton)
+			disableButton.onclick = function() {removeOverlay(this)}	// When the reveal button is pressed, call the removeOverlay function on the button
+			overlayDiv.appendChild(disableButton)
+		}
 	}
 }
 
@@ -55,7 +56,7 @@ function getTotalElements(){
 }
 
 function removeOverlay(button){
-	button.parentElement.style.visibility = "hidden"		// Get the parent div of the button and set display to none
+	button.parentElement.style.visibility = "hidden"		// Get the parent div of the button and set visibility to hidden
 }
 
 
