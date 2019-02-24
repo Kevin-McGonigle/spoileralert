@@ -7,6 +7,9 @@ def is_related_to_GoT(text, data):
 	phrases = r.get_ranked_phrases()
 	for phrase in phrases:
 		for word in phrase.split():
+			if word.casefold() == "white":
+				continue
 			if word.casefold() in data:
+				print("Found a match: {}".format(word.casefold()))
 				return True
 	return False
