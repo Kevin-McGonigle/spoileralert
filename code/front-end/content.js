@@ -1,4 +1,4 @@
-createOverlays()
+createOverlays();
 
 function containsKeyWord(text, keywords){
     let upper_text = text.toLowerCase();
@@ -33,80 +33,78 @@ if (matches.length > 0){
 }
 
 function createOverlays(){
-    totalElements = getTotalElements()
+    let totalElements = getTotalElements();
 
-    for (i = 0; i < totalElements.length; i++)  // For each element, generate an overlay div, position it, style it and append it to the document
+    for (let i = 0; i < totalElements.length; i++)  // For each element, generate an overlay div, position it, style it and append it to the document
     {   
-        if (totalElements[i].innerHTML  != "")  // There are empty p tags on joe.ie, we should ignore them
+        if (totalElements[i].innerHTML !== "")  // There are empty p tags on joe.ie, we should ignore them
         {
-            points = findCoordinates(totalElements, i)
-            var overlayDiv = document.createElement("Div")      // Create the overlayDiv
-            overlayDiv.className = "overlay"
+            let points = findCoordinates(totalElements, i);
+            let  overlayDiv = document.createElement("Div");  // Create the overlayDiv
+            overlayDiv.className = "overlay";
 
+            overlayDiv.style.width = Math.ceil(points[3]) + "px";  // Set the position of the overlayDiv
+            overlayDiv.style.top = Math.ceil(points[0]) + "px";
+            overlayDiv.style.left = (Math.ceil(points[1]) - 10) + "px";
+            overlayDiv.style.height = Math.ceil(points[2]) + "px";
 
-            overlayDiv.style.width = Math.ceil(points[3]) + "px" // set the position of the overlayDiv
-            overlayDiv.style.top = Math.ceil(points[0]) + "px"
-            overlayDiv.style.left = (Math.ceil(points[1]) - 10) + "px"
-            overlayDiv.style.height = Math.ceil(points[2]) + "px"
-
-            overlayDiv.style.border = "2px solid black"     // Style the overlay
-            overlayDiv.style.borderRadius = "5px"
-            overlayDiv.style.background = "lightgrey" 
-            overlayDiv.style.position = "absolute"
-            overlayDiv.style.zIndex = "2"           // Must be set to 2, this places the overlay above the text
+            overlayDiv.style.border = "2px solid black";  // Style the overlay
+            overlayDiv.style.borderRadius = "5px";
+            overlayDiv.style.background = "lightgrey";
+            overlayDiv.style.position = "absolute";
+            overlayDiv.style.zIndex = "2";  // Must be set to 2, this places the overlay above the text
             
-            document.body.appendChild(overlayDiv)
-            turnOneDivOn(overlayDiv)
+            document.body.appendChild(overlayDiv);
+            turnOneDivOn(overlayDiv);
 
-            var disableButton = document.createElement("button")    // make a button for removing the div
-            disableButton.innerHTML = "Reveal"
-            disableButton.className = "disable"
-            disableButton.style.position = "relative"
+            let disableButton = document.createElement("button");    // Make a button for removing the div
+            disableButton.innerHTML = "Reveal";
+            disableButton.className = "disable";
+            disableButton.style.position = "relative";
 
             //Style the button
-            disableButton.style.right = "75px"
-            disableButton.style.width = "65px"
-            disableButton.style.height = "25px"
-            disableButton.style.background = "salmon"
+            disableButton.style.right = "75px";
+            disableButton.style.width = "65px";
+            disableButton.style.height = "25px";
+            disableButton.style.background = "salmon";
 
-            disableButton.onclick = function() {removeOverlay(this)}    // When the reveal button is pressed, call the removeOverlay function on the button
-            overlayDiv.appendChild(disableButton)
+            disableButton.onclick = function() {removeOverlay(this)};  // When the reveal button is pressed, call the removeOverlay function on the button
+            overlayDiv.appendChild(disableButton);
         }
     }
 }
 
 
 function getTotalElements(){
-    const elements = ["h1", "h2", "h3", "h4", "h5", "h6", "h7", "p"]
-    var totalElements = []
-    for (i = 0; i < elements.length; i++)  // Get all the html tags that can contain text that we can block
+    const elements = ["h1", "h2", "h3", "h4", "h5", "h6", "h7", "p"];
+    let totalElements = [];
+    for (let i = 0; i < elements.length; i++)  // Get all the html tags that can contain text that we can block
     {
-        var list = document.getElementsByTagName(elements[i])
-        totalElements.push.apply(totalElements, list)
+        let list = document.getElementsByTagName(elements[i]);
+        totalElements.push.apply(totalElements, list);
     }
-    return totalElements
+    return totalElements;
 }
 
 function removeOverlay(button){
-    button.parentElement.style.visibility = "hidden"        // Get the parent div of the button and set visibility to hidden
+    button.parentElement.style.visibility = "hidden";  // Get the parent div of the button and set visibility to hidden
 }
 
 
 function findCoordinates(list, index){
-    var rect = list[index].getBoundingClientRect()
-    var height = rect.bottom - rect.top
-    var width = rect.right - rect.left
+    let rect = list[index].getBoundingClientRect();
+    let height = rect.bottom - rect.top;
+    let width = rect.right - rect.left;
     return [rect.top, rect.left, height, width];
 }
 
 function turnOneDivOn(div) {
-    div.style.display = "block"
+    div.style.display = "block";
 }
 
-function disableBlocking(){     // Stops all blocking of text
-    var list = document.getElementsByClassName("overlay")   // Every overlay div is given the class "overlay" in the createOverlays function above
-    for (i = 0; i < list.length; i++)
-    {
-        list[i].style.visibility = "hidden"
+function disableBlocking() {     // Stops all blocking of text
+    let list = document.getElementsByClassName("overlay");  // Every overlay div is given the class "overlay" in the createOverlays function above
+    for (let i = 0; i < list.length; i++) {
+        list[i].style.visibility = "hidden";
     }
 }
