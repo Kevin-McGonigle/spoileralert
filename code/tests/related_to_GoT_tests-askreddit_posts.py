@@ -1,0 +1,15 @@
+#This program uses the spoilers that we scraped from reddit to check how accurate our keywords-based identifier is.
+
+import pandas as pd
+from related_to_GoT import is_related_to_GoT
+with open(r"C:\Users\david\Desktop\ca326\2019-ca326-kevin-david-spoileralert\code\utils\data.txt", encoding="ISO-8859-1") as f:
+	data = f.read().splitlines()
+messages = pd.read_csv(r"C:\Users\david\Desktop\ca326\2019-ca326-kevin-david-spoileralert\code\utils\new_askreddit_posts.csv", encoding="ISO-8859-1")
+phrases = messages['title']
+passes = 0
+for i in range(len(phrases)):
+	if is_related_to_GoT(phrases[i],data):
+		passes += 1
+
+print("Accuracy for askreddit posts: {:.2f}%".format( ((passes/len(phrases)) * 100) ))
+
