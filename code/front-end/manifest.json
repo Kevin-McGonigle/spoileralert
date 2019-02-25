@@ -26,8 +26,8 @@
 
   "content_scripts": [
     {
-      "matches": ["https://www.joe.ie/*"],
-      "js": ["content.js"]
+      "matches": ["*://*.joe.ie/*"],
+      "js": ["jquery-3.3.1.js", "content.js"]
     }
   ]
 }
