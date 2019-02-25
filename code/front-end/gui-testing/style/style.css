@@ -1,0 +1,19 @@
+.main {
+	width: 45%;
+	margin:auto;
+}
+
+.disable {
+	width:65px;
+	height: 25px;
+	background-color: salmon;
+	font-weight: bold;
+	position: absolute;
+	border:solid;
+	border-width: 1px;
+	border-radius: 5px;
+}
+
+.disable:hover {
+	background-color: lightsalmon;
+}
