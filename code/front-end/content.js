@@ -14,6 +14,18 @@ for (let p of paragraphs){
     if (text.length > 0 && !matches.includes(text) && containsKeyWord(text, ['Russian Doll', 'Netflix']))
         matches.push(p.innerText);
 }
+if (matches.length > 0){
+    let json_matches = JSON.stringify(matches);
 
-let data = JSON.stringify(matches);
-let xmlhttp = new XMLHttpRequest();
+    $.ajax({
+        type: 'POST',
+        url: 'https://18.203.42.106',
+        data: json_matches,
+        success: function(result){
+            alert(result)
+        },
+        error: function () {
+            alert('There was an error sending data to the SpoilerAlert server.');
+        }
+    });
+}
