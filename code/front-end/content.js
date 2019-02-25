@@ -1,7 +1,9 @@
+createOverlays()
+
 function containsKeyWord(text, keywords){
-    let upper_text = text.toUpperCase();
+    let upper_text = text.toLowerCase();
     for (let kw of keywords){
-        if (upper_text.includes(kw.toUpperCase()))
+        if (upper_text.includes(kw))
             return true;
     }
     return false;
@@ -29,8 +31,6 @@ if (matches.length > 0){
         }
     });
 }
-
-createOverlays()
 
 function createOverlays(){
     totalElements = getTotalElements()
