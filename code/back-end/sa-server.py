@@ -1,4 +1,4 @@
-from flask import Flask, request, Response
+from flask import Flask, request, Response, render_template
 import ssl
 app = Flask(__name__)
 
@@ -13,6 +13,17 @@ def handle_post_request():
     resp = Response("Data received")
     resp.headers["Access-Control-Allow-Origin"] = '*'
     return resp  # Temporary, in future, return classification result
+
+
+@app.route("/survey", methods=["GET"])
+def load_survey():
+    questions = [("1", "Question 1 Text"), ("2", "Question 2 Text"), ("3", "Question 3 Text")]
+    return render_template("survey.html", questions=questions)
+
+
+@app.route("/survey", methods=["POST"])
+def survey_submission():
+    pass
 
 
 if __name__ == "__main__":
