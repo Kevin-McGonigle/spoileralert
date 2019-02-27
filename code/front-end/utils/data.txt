@@ -108,7 +108,6 @@ lysa
 belicho
 gerold
 momoa
-lem
 marsay
 elyes
 pryce
@@ -326,7 +325,7 @@ lannister
 jarrett
 vaughan
 meena
-wilding
+wildling
 selmy
 facioli
 greyjoy
@@ -343,7 +342,6 @@ pugh
 unella
 ostlere
 bentley
-lena
 michie
 mcmahon
 lynderly
@@ -485,7 +483,7 @@ vale
 giantsbane
 viserion
 rickon
-wun
+wun wun
 littlefinger
 walder
 naharis
@@ -606,23 +604,19 @@ anozie
 kane
 alys
 houten
-bermingham
-crossbowmen
 jaqen
 mcelhinney
 hightower
-white
+white walker
+white walkers
 jafer
 stark
 janos
-mcshane
-pedro
 tena
 claude
 struan
 essie
 wight
-taylor
 bartlett
 liburd
 bronn
@@ -630,22 +624,19 @@ staz
 kerry
 mawle
 waymar
-marsh
-rivers
 aimee
 baratheon
 ramon
 tyrion
 varly
 jonos
-despondent
 kit
 yerolemou
 riddell
 dontos
 moelle
 dormer
-mountain
+the mountain
 rhaego
 sydow
 orri
@@ -667,10 +658,8 @@ quaithe
 tommen
 shaggydog
 cognoli
-militant
 kristian
 carice
-madden
 maegyr
 cilenti
 broadbent
@@ -683,9 +672,6 @@ cerwyn
 dempsie
 leifsson
 randyll
-annette
-carter
-deserter
 rnsson
 siddig
 griffiths
@@ -695,13 +681,10 @@ mcginley
 rob
 tully
 fairley
-dwarf
 lhara
 loane
 horsham
 rykker
-noi
-van
 lancel
 forzho
 harrag
@@ -714,11 +697,9 @@ dongo
 marei
 ruairã
 dany
-sam
 hand of the king
 hella
 night king
-ros
 hotah
 brandon
 north of the wall
@@ -731,7 +712,6 @@ outside the three-eyed raven
 fist of the first men
 wildlings march south
 nightswatch march south
-hardhome
 craster's keep
 the haunted forest
 south to the wall
@@ -815,6 +795,7 @@ the stormlands
 tarth
 the woods
 storm's end
+game of thrones
 the reach
 highgarden
 to horn hill
@@ -897,7 +878,6 @@ hardhome
 the dance of dragons
 mother's mercy
 the red woman
-home
 oathbreaker
 book of the stranger
 the door
