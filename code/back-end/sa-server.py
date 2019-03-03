@@ -21,7 +21,7 @@ def handle_post_request():
 
 @app.route("/survey", methods=["GET"])
 def load_survey():
-    render_template("survey.html", sentences=pick_sentences())
+    return render_template("survey.html", sentences=pick_sentences())
 
 
 @app.route("/survey", methods=["POST"])
@@ -31,7 +31,7 @@ def survey_submission():
     for i in range(1, 11):
         [id, val] = data[i].split("=")
         sentences[int(id)][val] += 1
-    with open("sentence.pickle", "wb") as f:
+    with open("sentences.pickle", "wb") as f:
         pickle.dump(sentences, f)
 
     return render_template("complete.html")
