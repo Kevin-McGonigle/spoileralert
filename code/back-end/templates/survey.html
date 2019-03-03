@@ -3,32 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <title>SpoilerAlert Survey</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+    <script src="{{url_for('static', filename='jquery-3.3.1.js')}}"></script>
+    <script>
+        $(document).ready(function () {
+            $("#reveal").click(function () {
+                $("#questions").show();
+                $("#reveal").hide();
+            });
+        });
+    </script>
 </head>
 <body>
-    <h1>
-        SpoilerAlert Spoiler Classification Survey
-    </h1>
-    <p>
-        Hi there! We are David Early and Kevin McGonigle, two third year students in the BSc in Computer Applications and Software Engineering degree in Dublin City University (DCU).
-        As part of our third year project, under the supervision of Dr. Suzanne Little, we are creating a Google Chrome extension called "SpoilerAlert" that will detect and hide any spoilers for the popular HBO television series, Game of Thrones.
-        This project will serve as a proof of concept for a much more general spoiler blocker with potential to block spoilers for any TV show or movie.
-    </p>
-    <p>
-        One of the primary obstacles that we must overcome is the ambiguity and subjectivity in relation to what a spoiler actually is. The results of this survey will allow us to resolve these issues and serve as the basis for how our application will adjudge something as a spoiler or not.
-    </p>
-    <p>
-        No personal data will be collected as part of this survey and you will have the option of withdrawing from the survey at any time.
-        However, information provided cannot always be guaranteed by researchers and can only be protected within the limitations of the law - i.e., it is possible for data to be subject to subpoena, freedom of information claim or mandated reporting by some professions.
-        Should you decide to participate in this survey, you will be given a series of sentences relating to Game of Thrones and you will be asked to specify whether the given text is a spoiler or not.
-        There are no correct answers to these questions, this survey is simply asking for your opinion.
-        If you are interested in finding out what happens with the project, you may get in touch with us at david.early2@mail.dcu.ie and kevin.mcgonigle2@mail.dcu.ie or by contacting the DCU School of Computing.
-    </p>
-    <p>
-        Also, SPOILER ALERT. (Obviously)
-    </p>
-    {% for q in questions %}
-        <h1>Question {{questions.index(q)}}</h1>
-        <p>{{q[1]}}</p>
-    {% endfor %}
+    <div id="container">
+        <div id="head">
+            <h1>
+                SpoilerAlert Spoiler Classification Survey
+            </h1>
+            <p>
+                Hi there! We are David Early and Kevin McGonigle, two third year students in the BSc in Computer Applications and Software Engineering degree in Dublin City University (DCU).
+                As part of our third year project, under the supervision of Dr. Suzanne Little, we are creating a Google Chrome extension called "SpoilerAlert" that will detect and hide any spoilers for the popular HBO television series, Game of Thrones.
+                This project will serve as a proof of concept for a much more general spoiler blocker with potential to block spoilers for any TV show or movie.
+            </p>
+            <p>
+                One of the primary obstacles that we must overcome is the ambiguity and subjectivity in relation to what a spoiler actually is.
+                The results of this survey will allow us to resolve these issues and serve as the basis for how our application will adjudge something as a spoiler or not.
+            </p>
+            <p>
+                No personal data will be collected as part of this survey and you will have the option of withdrawing from the survey at any time.
+                However, information provided cannot always be guaranteed by researchers and can only be protected within the limitations of the law - i.e., it is possible for data to be subject to subpoena, freedom of information claim or mandated reporting by some professions.
+                Should you decide to participate in this survey, you will be given a series of sentences relating to Game of Thrones and you will be asked to specify whether the given text is a spoiler or not.
+                There are no correct answers to these questions, this survey is simply asking for your opinion.
+                If you are interested in finding out what happens with the project, you may get in touch with us at david.early2@mail.dcu.ie and kevin.mcgonigle2@mail.dcu.ie or by contacting the DCU School of Computing.
+            </p>
+            <p>
+                Also, SPOILER ALERT. (Obviously)
+            </p>
+            <input type="button" id="reveal" value="I'm in. Show me the survey!">
+        </div>
+        <div id="questions">
+            <form method="post" id="form">
+                <div class="question">
+                    <h2>
+                        Which of these most accurately describes your familiarity with the Game of Thrones television series?
+                    </h2>
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="radio" value="none" name="freq" required>
+                                I've never watched it.
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" value="some" name="freq" required>
+                                I've watched a few episodes.
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" value="most" name="freq" required>
+                                I've watched most of the episodes.
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" value="all" name="freq" required>
+                                I've watched every episode.
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" value="mult" name="freq" required>
+                                I've watched every episode multiple times.
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                {% for i, (id, s) in sentences %}
+                <div class="question">
+                    <h2>
+                        Question {{i}} - Is the following sentence a spoiler?
+                    </h2>
+                    <p>
+                        {{s}}
+                    </p>
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="radio" value="yes" name="{{id}}" required>
+                                Yes
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" value="no" name="{{id}}" required>
+                                No
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                {% endfor %}
+                <input type="submit">
+            </form>
+        </div>
+    </div>
 </body>
 </html>

@@ -1,12 +1,16 @@
 from flask import Flask, request, Response, render_template
+from random import sample
 import ssl
+import pickle
+
 app = Flask(__name__)
+with open("sentences.pickle", "rb") as f:
+    sentences = pickle.load(f)
 
 
 @app.route("/", methods=["GET", "POST"])
 def handle_post_request():
     data = request.get_data().decode("utf-8")
-    print(data)
 
     # TODO: Classify the data as a spoiler or not
 
@@ -17,13 +21,32 @@ def handle_post_request():
 
 @app.route("/survey", methods=["GET"])
 def load_survey():
-    questions = [("1", "Question 1 Text"), ("2", "Question 2 Text"), ("3", "Question 3 Text")]
-    return render_template("survey.html", questions=questions)
+    render_template("survey.html", sentences=pick_sentences())
 
 
 @app.route("/survey", methods=["POST"])
 def survey_submission():
-    pass
+    data = request.get_data().decode("utf-8").split("&")
+    freq = data[0][5:]  # Unused for now, left in for possible future logging
+    for i in range(1, 11):
+        [id, val] = data[i].split("=")
+        sentences[int(id)][val] += 1
+    with open("sentence.pickle", "wb") as f:
+        pickle.dump(sentences, f)
+
+    return render_template("complete.html")
+
+
+def min_votes():
+    m = min(sentences.values(), key=lambda x: x["yes"] + x["no"])
+    return m["yes"] + m["no"]
+
+
+def pick_sentences():
+    least_votes = [(k, v["sentence"]) for k, v in sentences.items() if v["yes"] + v["no"] == min_votes()]
+    if len(least_votes) < 10:
+        least_votes += [(k, v["sentence"]) for k, v in sentences.items() if v["yes"] + v["no"] == min_votes() + 1]
+    return enumerate(sample(least_votes, 10), 1)
 
 
 if __name__ == "__main__":
