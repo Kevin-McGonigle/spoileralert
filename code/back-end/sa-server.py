@@ -30,7 +30,7 @@ def load_survey():
 def survey_submission():
     data = request.get_data().decode("utf-8").split("&")
     for i in range(1, 11):
-        [id_num, val] = data[i].split("=") 
+        [id_num, val] = data[i].split("=")
         sentences[int(id_num)][val] += 1
     with open("sentences.pickle", "wb") as f:
         pickle.dump(sentences, f)
