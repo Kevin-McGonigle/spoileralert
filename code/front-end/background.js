@@ -1,3 +1,4 @@
-chrome.runtime.onInstalled.addListener(function() {
-    // add an action here
+$(document).ready(function () {
+    // Listen for DOM updates
+    
 });
