@@ -25,7 +25,4 @@ function removeAllOverlays() {
 
 document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("button1").addEventListener("click", removeAllOverlays);
-  document.getElementById('enableDisableButton').addEventListener("click", disableExtension)
 });
-
-

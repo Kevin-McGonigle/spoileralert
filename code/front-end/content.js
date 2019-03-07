@@ -1,5 +1,4 @@
 function createOverlays(elements, indexes){
-    console.log(elements);
     for (let i of indexes)  // For each element, generate an overlay div, position it, style it and append it to the document
     {
         let e = elements[i];
@@ -62,6 +61,20 @@ function createOverlays(elements, indexes){
         $(overlay).append(reveal);
     }
 }
+
+chrome.runtime.onMessage.addListener(
+      function(request, sender, sendResponse) {
+        if( request.message === "RemoveOverlays" ) {
+         disableBlocking();
+             }
+      }
+    );
+
+function disableBlocking() {
+    for (let o of document.getElementsByClassName("sa-overlay"))
+        $(o).hide();
+}
+
 
 function send(elements){
     $.ajax({
