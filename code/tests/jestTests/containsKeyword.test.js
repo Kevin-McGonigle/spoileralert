@@ -38,3 +38,12 @@ test('Subwords should not pass', () => {
 test('Rearranged words should not pass', () => {
 	expect(containsKeyWord('Thrones is a Game of up to four players', keywords_regex)).toBeFalsy();
 });
+
+
+test('Text that is labeled as a spoiler already should pass', () => {
+	expect(containsKeyWord('SPOILERS!! Some other text', keywords_regex)).toBeTruthy();
+});
+
+test('Text that is labeled no spoilers should not pass', () => {
+	expect(containsKeyWord('NO SPOILERS. Some other text', keywords_regex)).toBeFalsy();
+});
