@@ -31,7 +31,7 @@ tfidf_train = tfidf_vectorizer.fit_transform(X_train.values.astype(str))
 
 # Transform the test data: tfidf_test 
 print(type(X_test.values.astype(str)))
-tfidf_test = tfidf_vectorizer.transform(["Jon Snow dies", "I'm going to have to eat every fucking chicken in this room"])
+tfidf_test = tfidf_vectorizer.transform(["Jon Snow dies"])
 tfidf_test = tfidf_test.astype('int')
 # Create the CountVectorizer DataFrame: count_df
 

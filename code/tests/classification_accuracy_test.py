@@ -1,4 +1,4 @@
-# This program calculates the accuracy of the bayesian classifier accross 75 different splits of the data.
+# This program calculates the accuracy of the bayesian classifier accross a user entered number of splits of the data.
 
 # Code taken from datacamp under "natural language processing fundamentals in python"
 
@@ -25,9 +25,9 @@ def train_and_predict(alpha):
     score = metrics.accuracy_score(y_test, pred)
     return score
 
-file = "../utils/data.csv"
+file = "../../../combine.csv"
 
-df = pd.read_csv(file, encoding="ISO-8859-1")
+df = pd.read_csv(file, encoding="ISO-8859-1", skip_blank_lines=True)
 
 y = df.label
 
@@ -38,7 +38,7 @@ seeds = int(input("Enter how many splits of the data you would like: "))
 for i in range(seeds):
     X_train, X_test, y_train, y_test = train_test_split(df["text"],
                                                         y,
-                                                        test_size = 0.33,
+                                                        test_size = 0.3,
                                                         random_state = i)
 
 
