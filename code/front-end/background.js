@@ -1,4 +1,4 @@
-chrome.runtime.onMessage.addListener(function (request) {
+/*chrome.runtime.onMessage.addListener(function (request) {
     if(request.message === "validSite"){
         chrome.browserAction.setIcon({path: "images/logo-no-spoiler.png"});
     }
@@ -6,4 +6,4 @@ chrome.runtime.onMessage.addListener(function (request) {
         chrome.browserAction.setIcon({path: "images/logo-spoiler.png"});
         //chrome.browserAction.setBadgeText({text: request.message.split()[1]});
     }
-});
+});*/
