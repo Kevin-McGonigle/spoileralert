@@ -64,17 +64,6 @@ function createOverlays(elements, indexes){
     }
 }
 
-chrome.runtime.onMessage.addListener(function(request) {
-    if( request.message === "RemoveOverlays" )
-        disableBlocking();
-});
-
-function disableBlocking() {
-    for (let o of document.getElementsByClassName("sa-overlay"))
-        $(o).hide();
-}
-
-
 function send(elements){
     if (elements.length > 0){
         $.ajax({
@@ -113,6 +102,11 @@ const keywords = ['winter is coming', 'tyrion', 'cersei', 'daenerys', 'game of t
 const kw_regex = new RegExp("\\b(" + keywords.join("|") + ")\\b", "i");
 
 $(document).ready(function () {
+    chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+        if(request.message === "RemoveOverlays")
+            $(".sa.overlay").hide();
+    });
+
     let stylesheet = document.createElement("link");
     stylesheet.href = chrome.extension.getURL("sa-styles.css");
     stylesheet.rel = "stylesheet";
