@@ -218,8 +218,7 @@ this is something that we would revisit.
 ## 5. User Installation
 
 1. Go to this link in Google Chrome:
-    https://chrome.google.com/webstore/detail/spoileralert/ocdndfdompohemjkmjjlhoacjjb
-    knfia
+    https://chrome.google.com/webstore/detail/spoileralert/ocdndfdompohemjkmjjlhoacjjbknfia
 2. Click the “Add to Chrome” button on the right hand side.
 3. Click “Add extension”
 
