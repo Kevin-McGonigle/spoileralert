@@ -71,6 +71,8 @@ strings.
 
 ## 2. System Architecture
 
+![System Architecure Diagram](./SystemArchitecureDiagram.png)
+
 _Web Page:_ ​The website that the user visits. In the case where this is a page on Joe.ie, the
 product will begin the procedure of identifying GoT related text, sending text to the server
 and creating appropriate overlays. Where this is any other web page, the extension will
@@ -93,13 +95,13 @@ overlays.
 ## 3. High-Level Design
 
 ### 3.1 State Diagram - Website
-
+![StateDiagram](./images/StateDiagramWebsite.png)
 
 ### 3.2 Context Diagram
-
+![ContextDiagram](./images/ContextDiagram.png)
 
 ### 3.2 Sequence Diagram - Block Spoilers
-
+![Sequence Diagram](./images/SequenceDiagramWebsite.png)
 
 ## 4. Problems and Resolution
 
