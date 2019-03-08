@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Staatliches');
+
+.container {
+    width: 230px;
+    padding: 10px;
+}
+
+#head {
+    margin: auto;
+    display: block;
+}
+
+#head img.logo{
+    margin: auto;
+    display: block;
+    height: 200px;
+}
+
+#head h1{
+    font-family: Staatliches, sans-serif;
+    font-size: 40px;
+    color: #331e38;
+    text-align: center;
+    display: block;
+    margin: 0;
+}
+
+#content{
+    margin: auto;
+    display: block;
+}
+
+#content p{
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    color: #331e38;
+    display: block;
+}
+
+#content input#remove-button{
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #331e38;
+    width: 200px;
+    padding: 10px;
+    display: block;
+    margin: auto;
+    background-color: #edf2f4;
+    border: 3px solid #331e38;
+    border-radius: 5px;
+}

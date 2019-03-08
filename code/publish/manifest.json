@@ -1,0 +1,42 @@
+{
+  "name": "SpoilerAlert",
+  "version": "1.0",
+  "description": "Dynamic blocking of text-based spoilers for the TV series, Game of Thrones.",
+  "manifest_version": 2,
+  "incognito": "spanning",
+  "icons": {
+    "16": "./images/logo16.png",
+    "48": "./images/logo48.png",
+    "128": "./images/logo128.png"
+    },
+
+    "background": {
+      "scripts": [
+        "jquery-3.3.1.js",
+        "background.js"
+      ],
+      "persistent": false
+    },
+
+  "browser_action": {
+    "default_title": "SpoilerAlert",
+    "default_popup": "./popup.html",
+    "default_icon": {
+      "16": "./images/logo16.png",
+      "48": "./images/logo48.png",
+      "128": "./images/logo128.png"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.joe.ie/*", "*://localhost/*"],
+      "js": ["jquery-3.3.1.js", "content.js"]
+    }
+  ],
+
+  "web_accessible_resources":[
+    "sa-styles.css",
+    "images/*"
+  ]
+}

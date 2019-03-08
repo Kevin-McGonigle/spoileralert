@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Staatliches');
+
+div.sa.wrapper{
+    position: relative;
+}
+
+div.sa.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #edf2f4;
+    border: 3px solid #331e38;
+    border-radius: 5px;
+    z-index: 1000;
+    font-family: Staatliches, sans-serif;
+    font-size: 30px;
+    color: #331e38;
+    text-align: center;
+}
+
+img.sa.logo, input.sa.reveal{
+    top: 5px;
+    bottom: 5px;
+    width: 30px;
+    margin: auto;
+    position: absolute;
+}
+
+img.sa.logo{
+    left: -40px;
+}
+
+input.sa.reveal{
+    right: -40px;
+}
