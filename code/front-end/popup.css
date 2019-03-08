@@ -1,0 +1,24 @@
+.main {
+    width:350px;
+}
+
+.text {
+    width: 300px;
+    margin: auto;
+    display: block;
+}
+
+img{
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    width: 75%;
+}
+.main input{
+    width:75%;
+    padding:10px 10px 10px 10px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
