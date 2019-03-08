@@ -1,6 +1,7 @@
 function createOverlays(elements, indexes){
     for (let i of indexes)  // For each element, generate an overlay div, position it, style it and append it to the document
     {
+        elements[i].setAttribute("aria-hidden", "true")         // Hides text from screen readers, currently untested 
         let e = elements[i];
         let h = $(e).innerHeight();
         let w = $(e).innerWidth();
