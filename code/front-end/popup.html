@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<title>SpoilerAlert</title>
 	<script src="./popup.js"></script>
 	<link rel="stylesheet" type="text/css" href="popup.css">
 </head>
 <body>
-	<div class="main">
-		<div class="text">
-			<img src="./images/logo.png" alt="SpoilerAlert Logo">
-			<h4>SpoilerAlert has detected that you are on a website that it is capable of blocking. If it finds any spoilers, it will block them for you.</h4>
-			<input id="button1" type=button value="Remove Overlays">
+	<div class="container">
+		<div id="head">
+			<img src="./images/logo.png" alt="SpoilerAlert Logo" class="logo">
+			<h1>SpoilerAlert</h1>
+		</div>
+		<div id="content">
+			<p>SpoilerAlert has detected that you are on a website that it is capable of blocking. If it finds any spoilers, it will block them for you.</p>
+			<input id="remove-button" type=button value="Remove Blocking">
 		</div>
 	</div>
 </body>
