@@ -53,14 +53,19 @@ blocking but ultimately decided some false positives and negatives are to be exp
 
 ### 1.1 Glossary
 
-**GoT** ​: Game of Thrones.
-**MCU:** ​Marvel Cinematic Universe.
+**GoT** ​: Game of Thrones.  
+
+**MCU:** ​Marvel Cinematic Universe.  
+
 **Bayes Theorem:** ​D​escribes the probability of an event, based on prior knowledge of
-conditions that might be related to the event.
+conditions that might be related to the event.  
+
 **Sci-kit-learn(sklearn)** ​: The machine learning library in python used to train our Bayesian
-Classifier.
+Classifier.  
+
 **Regular Expressions(RegEx):** ​A sequence of characters that define a search pattern for
-strings.
+strings.  
+
 **IMDbPY:** ​An API that allows us to query the IMDb database from python.
 
 
