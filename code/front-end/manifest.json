@@ -1,28 +1,32 @@
 {
   "name": "SpoilerAlert",
   "version": "1.0",
-  "description": "Blocks spoilers for Game of Thrones",
+  "description": "Dynamic blocking of text-based spoilers for the TV series, Game of Thrones.",
   "manifest_version": 2,
+  "incognito": "spanning",
+  "icons": {
+    "16": "./images/logo16.png",
+    "48": "./images/logo48.png",
+    "128": "./images/logo128.png"
+    },
 
-  "background": {
-    "scripts": [
-      "background.js"
-    ],
-    "persistent": false
-  },
-
+    "background": {
+      "scripts": [
+        "jquery-3.3.1.js",
+        "background.js"
+      ],
+      "persistent": false
+    },
 
   "browser_action": {
+    "default_title": "SpoilerAlert",
     "default_popup": "./popup.html",
     "default_icon": {
-      "16": "./images/stop.png"
+      "16": "./images/logo16.png",
+      "48": "./images/logo48.png",
+      "128": "./images/logo128.png"
     }
   },
-
-  "icons": {
-    "16": "./images/stop.png"
-  },
-
 
   "content_scripts": [
     {
@@ -32,7 +36,7 @@
   ],
 
   "web_accessible_resources":[
-    "sa_styles.css",
+    "sa-styles.css",
     "images/*"
   ]
 }

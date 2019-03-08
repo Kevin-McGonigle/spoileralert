@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Staatliches');
 
-div.sa-overlay{
+div.sa.wrapper{
+    position: relative;
+}
+
+div.sa.overlay{
     position: absolute;
     top: 0;
     left: 0;
@@ -14,7 +18,7 @@ div.sa-overlay{
     text-align: center;
 }
 
-img.sa-logo, input.sa-reveal{
+img.sa.logo, input.sa.reveal{
     top: 5px;
     bottom: 5px;
     width: 30px;
@@ -22,10 +26,10 @@ img.sa-logo, input.sa-reveal{
     position: absolute;
 }
 
-img.sa-logo{
+img.sa.logo{
     left: -40px;
 }
 
-input.sa-reveal{
+input.sa.reveal{
     right: -40px;
 }
