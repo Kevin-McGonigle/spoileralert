@@ -71,7 +71,7 @@ strings.
 
 ## 2. System Architecture
 
-![System Architecure Diagram](./SystemArchitecureDiagram.png)
+![System Architecure Diagram](./images/SystemArchitecureDiagram.png)
 
 _Web Page:_ ​The website that the user visits. In the case where this is a page on Joe.ie, the
 product will begin the procedure of identifying GoT related text, sending text to the server
