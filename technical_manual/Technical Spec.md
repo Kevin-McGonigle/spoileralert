@@ -1,6 +1,6 @@
-#SpoilerAlert: Technical Specification
+# SpoilerAlert: Technical Specification
 
-###By David Early and Kevin McGonigle
+### By David Early and Kevin McGonigle
 
 
 ## Table Of Contents
