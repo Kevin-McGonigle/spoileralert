@@ -101,7 +101,7 @@ overlays.
 ![ContextDiagram](./images/ContextDiagram.png)
 
 ### 3.2 Sequence Diagram - Block Spoilers
-![Sequence Diagram](./images/SequenceDiagramWebsite.png)
+![Sequence Diagram](./images/Sequence_Diagram.png)
 
 ## 4. Problems and Resolution
 
