@@ -1,9 +1,6 @@
-/*chrome.runtime.onMessage.addListener(function (request) {
-    if(request.message === "validSite"){
-        chrome.browserAction.setIcon({path: "images/logo-no-spoiler.png"});
+chrome.extension.onMessage.addListener(
+    function(request, sender, sendResponse) {
+    if (request.message === "validSite") {
+        chrome.pageAction.show(sender.tab.id);
     }
-    else if(request.message.includes("spoilerCount")){
-        chrome.browserAction.setIcon({path: "images/logo-spoiler.png"});
-        //chrome.browserAction.setBadgeText({text: request.message.split()[1]});
-    }
-});*/
+});
