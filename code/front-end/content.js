@@ -31,6 +31,7 @@ function createOverlays(elements, indexes){
         reveal.src = chrome.extension.getURL("images/reveal-eye.png");
         reveal.alt = "Reveal";
         reveal.onclick = function () {
+            elements[i].setAttribute("aria-hidden", "false")
             $(overlay).hide();
         };
 
