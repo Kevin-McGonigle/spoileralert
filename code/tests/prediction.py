@@ -36,16 +36,28 @@ def is_spoiler(text):
 		return True
 	return False
 
-"""
-#print(is_spoiler("Ned Stark is a character from Game of Thrones 2011"))
 
-pred = mnb.predict(text)
-	global cv1, mnb
-	text = cv1.transform([text])
-	return mnb.predict(text)[0]
+# Define train_and_predict()
+def train_and_predict(alpha):
+    # Instantiate the classifier: nb_classifier
+    nb_classifier = MultinomialNB(alpha=alpha)
+    # Fit to the training data
+    nb_classifier.fit(tfidf_train, y_train)
+    # Predict the labels: pred
+    pred = nb_classifier.predict(tfidf_test)
+    # Compute accuracy: score
+    score = metrics.accuracy_score(y_test, pred)
+    return score
 
+# Create the list of alphas: alphas
+alphas = np.arange(0,1,0.1)
 
-file = "../utils/excels/combine.csv"
+# Iterate over the alphas and print the corresponding score
+for alpha in alphas:
+    print('Alpha: ', alpha)
+    print('Score: ', train_and_predict(alpha))
+
+file = "../utils/excels/data.csv"
 
 df = pd.read_csv(file, encoding="ISO-8859-1", skip_blank_lines=True)
 
@@ -73,7 +85,14 @@ mnb.fit(x_traincv, y_train)
 pred = mnb.predict(text)
 print(pred[0])
 
+feature_names = cv1.get_feature_names()
+
+feats_with_weights = sorted(zip(mnb.coef_[0], feature_names))
+
+print(feats_with_weights[:20])
+print("\n")
+print(feats_with_weights[-20:])
+
 #score = metrics.accuracy_score(y_test, pred)
 #print(score)
 
-"""
