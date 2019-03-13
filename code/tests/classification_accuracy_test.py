@@ -61,11 +61,6 @@ for i in range(seeds):
     # Create the TfidfVectorizer DataFrame: tfidf_df
     tfidf_df = pd.DataFrame(tfidf_train.A, columns=tfidf_vectorizer.get_feature_names())
 
-
-
-    # Outputs the confustion matrix, in this example there are 52 "non-spoilers" that are incorrectly classified as spoilers and 38 that are accurately
-    #                                                                                                           classified as "non-spoilers".
-
     # Create a Multinomial Naive Bayes classifier: nb_classifier
     nb_classifier = MultinomialNB(alpha=0.1)
 
@@ -104,7 +99,6 @@ class_labels = nb_classifier.classes_
 
 # Extract the features: feature_names
 feature_names = tfidf_vectorizer.get_feature_names()
-
 # Zip the feature names together with the coefficient array and sort by weights: feat_with_weights
 
 feat_with_weights = sorted(zip(nb_classifier.coef_[0], feature_names))

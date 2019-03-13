@@ -6,7 +6,7 @@ test('Obvious GoT relation should matchTextTest', () => {
 });
 
 test('Punctuation shouldn\'t matter', () => {
-	expect(matchTextTest('Ned Stark\'s ').not.toBeNull());
+	expect(matchTextTest('(Ned Stark\'s) Head? is "Chopped" off')).not.toBeNull();
 });
 
 test('Capitals shouldn\'t matter)', () => {
