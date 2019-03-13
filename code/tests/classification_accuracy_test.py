@@ -90,8 +90,6 @@ print("The accuracy of the bayesian classifier accorss {} different splits of th
 # Create the list of alphas: alphas
 alphas = np.arange(0,1,0.1)
 
-# Define train_and_predict()
-
 
 # Iterate over the alphas and print the corresponding score
 for alpha in alphas:
