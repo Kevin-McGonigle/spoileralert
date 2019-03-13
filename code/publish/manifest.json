@@ -1,6 +1,6 @@
 {
   "name": "SpoilerAlert",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Dynamic blocking of text-based spoilers for the TV series, Game of Thrones.",
   "manifest_version": 2,
   "incognito": "spanning",
